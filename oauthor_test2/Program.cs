@@ -24,8 +24,6 @@ app.UseAntiforgery();
 
 
 var grant = app.MapGroup("/grant");
-
-
 grant.MapGet("/google", (IConfiguration config, HttpContext httpContext) =>
 {
     var google = config.GetSection("Authenticates:Google");
@@ -43,7 +41,6 @@ grant.MapGet("/google", (IConfiguration config, HttpContext httpContext) =>
 
 
 var onConsent = app.MapGroup("/on-consent");
-
 onConsent.MapGet("/google",async  (IConfiguration config,
     [FromQuery(Name = "code")] string authzCode) =>
 {
