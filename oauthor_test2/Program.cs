@@ -62,7 +62,7 @@ onConsent.MapGet("/google",async  (IConfiguration config,
     return body;
 });
 
-//TESTTAG
+//TESTTAG a
 app.MapRazorComponents<App>();
 
 app.Run();
